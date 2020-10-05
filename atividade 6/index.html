@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Criando um jogo</title>
+</head>
+<body>
+<script>
+    var escolha = prompt("Escolha entre pedra,papel ou tesoura?: ");
+    var joPC = Math.random();
+    
+    if(joPC < 0.34){
+        joPC = "tesoura";
+    }else if(joPC <= 0.66){
+        joPC = "pedra";
+    }else{
+        joPC = "papel";
+    }
+    alert("Escolha do Computador: " + joPC);
+
+    if (escolha === joPC)
+        alert("O resultado é um empate!")
+    else if (escolha === "tesoura") {
+        if (joPC === "pedra")
+            alert("Computador venceu!!");
+        else {
+            alert("Jogador 1 venceu");
+        }
+    }
+    else if (escolha === "papel") {
+        if (joPC === "pedra")
+            alert("Jogador venceu");
+        else {
+            alert("Computador venceu");
+        }
+    }
+    else if (escolha === "pedra") {
+        if (joPC === "tesoura")
+            alert("Jogador venceu");
+        else {
+            alert("Computador venceu");
+        }
+    }
+
+</script>  
+</body>
+</html>
