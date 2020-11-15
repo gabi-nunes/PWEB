@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+     <title>Atividade 13
+     </title> 
+     <style>
+         div{
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             padding: 200px;
+
+         }
+     </style> 
+     <script>
+       siteFatec='http://www.fatecsorocaba.edu.br/';
+       function pop(s){
+           const Nome=s.options[s.selectedIndex].text;
+           if(!window.confirm('Abrir com a impressao' + Nome + '?'))
+           return;
+
+           const curso = s.value;
+           window.open(siteFatec + curso, 'NovaJanela', 'width = 600, height= 300');
+       }
+ 
+         
+     </script>
+</head>
+<body>
+
+   
+  
+
+
+        <div id="principal" width=200 heigth=200 align=center >
+    
+            <h1>Cursos da fatec</h1>
+
+            <select id="cboCidades" onchange="pop(this)">
+                <option value=""></option>
+                <option value="ADS"  onchange="maiu(this);">Analise e desenvolvimento de Sistemas  </option>
+                <option value="EA">eletronica Automotiva</option>
+                <option value="FM">Fabricação Mecanica</option>
+                <option value="GE">Gestão empresarial</option>
+                <option value="GQ">Gestão de qualidade </option>
+                <option value="LO">Logistica</option>
+                <option value="MA">Manufatura avançada</option>
+                <option value="PM">Processor Mertalurgicos </option>
+                <option value="PMC">Processor Mecanica </option>
+                <option value="PO">polimeros</option>
+                <option value="SBI">Sistemas Biomendicos </option>
+            </select>
+          
+        </div>
+        
+
+
+    </body>
+    </html>
