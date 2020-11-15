@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 11</title>
+    <script>
+       maiu = (checkM) => {
+           if(!checkM.checked) return;
+           const input = document.forms.formulario1[0];
+            input.value = input.value.toUpperCase();
+            document.forms.formulario1.children[2].children["ckeMi"].checked= false;
+
+       }
+       min = (checkM) => {
+           if(!checkM.checked) return;
+           const input = document.forms.formulario1[0];
+            input.value = input.value.toLowerCase();
+            document.forms.formulario1.children[1].children["Mai"].checked= false;
+
+       }
+
+        
+    </script>
+
+
+</head>
+
+
+    <body>
+        <form  name="formulario1" id="formulario1">
+
+    <div id="principal" width=200 heigth=200 align=center>
+
+
+        <input type="text" id="idCampo1" size="52" maxlength="150">
+        <br>
+        <label for= "mai">Maiuscula</label>
+        <input  name ="Mai"  id= "Ma" type="checkbox" onclick="maiu(this);">
+        <br>
+        <label for= "Mi">Minuscula</label>
+        <input  name ="ckeMi"  id= "Mi" type="checkbox" onclick="min(this);">
+        <br>
+    </div>
+    
+    </form>
+    </body>
+</html>
